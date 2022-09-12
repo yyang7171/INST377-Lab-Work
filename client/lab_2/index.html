@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div>
-      <header><h1>Yabing's Labs for INST377</h1></header>
-      <div>
-        <div>
-          <h3>albums</h3>
-          <ol>
+    <div class="wrapper">
+      <!--wrapper-->
+      <header class="header"><h1>Yabing's Labs for INST377</h1></header>
+      <div class="container">
+        <!--container-->
+        <div class="left_section box">
+          <!--left inputs-->
+          <h3>Album Names</h3>
+          <ol class="subtitle box">
             <li>BTS - The Most Beautiful Moment in Life, Pt. 2</li>
             <li>Joker Xue - 意外</li>
             <li>MoonMoon - LIFE IS BEAUTY FULL</li>
@@ -21,7 +24,7 @@
             <li>Fall Out Boy - Save Rock and Roll</li>
           </ol>
         </div>
-        <div>
+        <div class="right_section box"> <!--right side-->
           <h3>Image Carousel</h3>
           <div>
             <img
@@ -42,14 +45,14 @@
               alt="Mochi with vectors on its sides."
             />
           </div>
-          <div>
+          <div class="subtitle box">
             Mochi image in four formats. From left to right: .jpg, .gif, .png,
             and .svg
           </div>
         </div>
       </div>
-    </div>
-    <footer>
+    </div> <!--footer-->
+    <footer class="footer">
       yyang7171
       <a
         href="http://github.com/yyang7171"
@@ -60,10 +63,3 @@
     </footer>
   </body>
 </html>
-
-Then add CSS class names to your HTML to make it look like the lab pictures.
-For example: <div class="selector">
-
-You should not need to edit the CSS to do this, only the HTML.
-
-Don't forget to add an actual set of image descriptions to your image carousel.
