@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.keyCode === 37) {
       moveLeft();
     } else if (e.keyCode === 38) {
-      // rotate
+      rotate();
     } else if (e.keyCode === 39) {
       moveRight();
     } else if (e.keyCode === 40) {
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // freeze function
   function freeze() {
     if (current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
-      current.forEach(index => squares[currentPositio + index].classList.add('taken'));
+      current.forEach(index => squares[currentPosition + index].classList.add('taken'));
     }
     // start new tetromino falling
     random = Math.floor(Math.random() * theTetrominoes.length);
