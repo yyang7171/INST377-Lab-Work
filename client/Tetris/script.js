@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
-  let squares = Array.from(document.querySelectorAll('.grid div'));
+  const squares = Array.from(document.querySelectorAll('.grid div'));
   const ScoreDisplay = document.querySelector('#score');
   const StartBtn = document.querySelector('#start-button');
   const width = 10;
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const tTetromino = [
-    [1, width, width + 1 , width + 2],
+    [1, width, width + 1, width + 2],
     [1, width + 1, width + 2, width * 2 + 1],
     [width, width + 1, width + 2, width * 2 + 1],
     [1, width, width + 1, width * 2 + 1]
@@ -43,19 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
 
-  let currentPosition = 4;
+  const currentPosition = 4;
+  const currentRotation = 0;
 
   // randomly select one tetromino and its first pos
-  let random = Math.floor(Math.random()*theTetrominoes.length);
-  console.log(random)
-  let current = theTetrominoes[0][0];
+  const random = Math.floor(Math.random() * theTetrominoes.length);
+  const current = theTetrominoes[random][currentRotation];
 
-  // first rotation of the first tetromino
+  // draw the tetromino
   function draw() {
-    current.forEach(index => {
+    current.forEach((index) => {
       squares[currentPosition + index].classList.add('tetromino');
     });
   }
 
-  draw();
+  // undraw the tetromino
+  function undraw() {
+    current.forEach((index) => {
+      squares[currentPosition + index].classList.remove('tetromino');
+    });
+  }
 });
