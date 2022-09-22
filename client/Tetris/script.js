@@ -73,5 +73,27 @@ document.addEventListener('DOMContentLoaded', () => {
     currentPosition += width;
     draw();
   }
-  
+
+  // freeze function
+  function freeze() {
+    if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
+      current.forEach(index => squares[currentPositio + index].classList.add('taken'));
+    }
+    // start new tetromino falling
+    random = Math.floor(Math.random() * theTetrominoes.length);
+    current = theTetrominoes[random][currentRotation];
+    currentPosition = 4;
+    draw();
+  }
+
+  // move tetromino left unless blocked or at edge
+  function moveLeft() {
+    undraw();
+    const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0);
+    if (!isAtLeftEdge) currentPosition -= 1;
+    if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+      currentPosition += 1;
+    }
+    draw();
+  }
 });
