@@ -180,14 +180,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function addScore() {
     for (let i = 0; i < 199; i +=width) {
       const row = [i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9];
-      if(row.every(index => squares[index].classList.contains('taken'))) {
+      if(row.every((index) => squares[index].classList.contains('taken'))) {
         score +=10;
         scoreDisplay.innerHTML = score;
-        row.forEach(index => {
+        row.forEach((index) => {
           squares[index].classList.remove('taken');
         });
         const squaresRemoved = squares.splice(i, width);
-        console.log(squaresRemoved)
+        console.log(squaresRemoved);
       }
     }
   }
