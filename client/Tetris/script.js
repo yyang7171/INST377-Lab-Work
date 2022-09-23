@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const width = 10;
   let nextRandom = 0;
   let timerId;
+  let score = 0;
 
   // The Tetrominoes
   const lTetromino = [
@@ -47,8 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentPosition = 4;
   let currentRotation = 0;
-
-  console.log(theTetrominoes[0][0]);
 
   // randomly select one tetromino and its first pos
   let random = Math.floor(Math.random() * theTetrominoes.length);
@@ -102,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentPosition = 4;
     draw();
     displayShape();
+    addScore();
   }
 
   // move tetromino left unless blocked or at edge
@@ -175,5 +175,17 @@ document.addEventListener('DOMContentLoaded', () => {
     displayShape();
   }
 
+  // add score
 
+  function addScore() {
+    for (let i = 0; i < 199; i +=width) {
+      const row = [i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9];
+      if(row.every(index => squares[index].classList.contains('taken'))) {
+        score +=10;
+        scoreDisplay.innerHTML = score;
+        row.forEach(index => {
+          squares[index].classList.remove('taken');
+        });
+        const squaresRemoved = squares.splice(i, width);
+  }
 });
