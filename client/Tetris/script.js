@@ -150,16 +150,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // nested function check to see if OOB
     function OOB() {
       if ((currentPosition + 1) % width < 4) { // checks position index
-        if (current.some(index=> (currentPosition + index + 1) % width === 0)) {
+        if (current.some((index) => (currentPosition + index + 1) % width === 0)) {
           // check to see if parts have gone to right side
           currentPosition += 1;
           // moves whole tetromino right by 1 to prevent it going over
           OOB();
           // checks again in case lTetromino since it's longer
         }
-      }
-      else if (currentPosition % width > 5) { // checks position here too
-        if (current.some(index=> (currentPosition + index) % width === 0)) {
+      } else if (currentPosition % width > 5) { // checks position here too
+        if (current.some((index) => (currentPosition + index) % width === 0)) {
           // check to see if going to left side
           currentPosition -= 1;
           // moves whole tetromino left by 1 to prevent it going over
@@ -176,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // show next tetromino in mini grid
   const displaySquares = document.querySelectorAll('.mini-grid div');
   const displayWidth = 4;
-  let displayIndex = 0;
+  const displayIndex = 0;
 
   // the tetrominoes w/o rotations
   const upNextTetrominoes = [
@@ -190,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // display the next up shape in mini-grid
   function displayShape() {
     // remove tetromino
-    displaySquares.forEach((square) =>{
+    displaySquares.forEach((square) => {
       square.classList.remove('tetromino');
       square.style.backgroundColor = '';
     });
