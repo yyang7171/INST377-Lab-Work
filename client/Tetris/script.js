@@ -90,19 +90,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // freeze function
+
   function freeze() {
     if (current.some((index) => squares[currentPosition + index + width].classList.contains('taken'))) {
       current.forEach((index) => squares[currentPosition + index].classList.add('taken'));
+      // get new tetromino to fall
+      random = nextRandom;
+      nextRandom = Math.floor(Math.random() * theTetrominoes.length);
+      current = theTetrominoes[random][currentRotation];
+      currentPosition = 4;
+      draw();
+      displayShape();
+      addScore();
+      gameOver();
     }
-    // start new tetromino falling
-    random = nextRandom
-    nextRandom = Math.floor(Math.random() * theTetrominoes.length);
-    current = theTetrominoes[random][currentRotation];
-    currentPosition = 4;
-    draw();
-    displayShape();
-    addScore();
-    gameOver();
   }
 
   // move tetromino left unless blocked or at edge
@@ -130,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // rotate the tetromino
   function rotate() {
     undraw();
-    currentPosition++;
+    currentRotation++;
     if (currentRotation === current.length) {
       // if rotation = 4, goes back to 0
       currentRotation = 0;
@@ -165,16 +166,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // adds functionality to the button
-  StartBtn.addEventListener('click', null);
-  if (timerId) {
-    clearInterval(timerId);
-    timerId = null;
-  } else {
-    draw();
-    timerId = setInterval(moveDown, 1000);
-    nextRandom = Math.floor(Math.random() * theTetrominoes.length);
-    displayShape();
-  }
+  StartBtn.addEventListener('click', () => {
+    if (timerId) {
+      clearInterval(timerId);
+      timerId = null;
+    } else {
+      draw();
+      timerId = setInterval(moveDown, 1000);
+      nextRandom = Math.floor(Math.random() * theTetrominoes.length);
+      displayShape();
+    }
+  });
 
   // add score
 
