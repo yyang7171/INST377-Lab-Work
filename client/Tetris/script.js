@@ -146,6 +146,30 @@ document.addEventListener('DOMContentLoaded', () => {
       currentRotation = 0;
     }
     current = theTetrominoes[random][currentRotation];
+
+    // nested function check to see if OOB
+    function OOB() {
+      if ((currentPosition + 1) % width < 4) { // checks position index
+        if (current.some(index=> (currentPosition + index + 1) % width === 0)) {
+          // check to see if parts have gone to right side
+          currentPosition += 1;
+          // moves whole tetromino right by 1 to prevent it going over
+          OOB();
+          // checks again in case lTetromino since it's longer
+        }
+      }
+      else if (currentPosition % width > 5) { // checks position here too
+        if (current.some(index=> (currentPosition + index) % width === 0)) {
+          // check to see if going to left side
+          currentPosition -= 1;
+          // moves whole tetromino left by 1 to prevent it going over
+          OOB();
+          // checks again
+        }
+      }
+    }
+
+    OOB();
     draw();
   }
 
