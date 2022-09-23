@@ -23,7 +23,7 @@ function updateSlidePosition() {
     slide.classList.remove('visible');
     slide.classList.add('hidden');
   });
-  console.log(slidePosition)
+  console.log(slidePosition);
   slides[slidePosition].classList.add('visible');
 }
 
