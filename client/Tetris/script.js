@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // freeze function
   function freeze() {
-    if (current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
-      current.forEach(index => squares[currentPosition + index].classList.add('taken'));
+    if (current.some((index) => squares[currentPosition + index + width].classList.contains('taken'))) {
+      current.forEach((index) => squares[currentPosition + index].classList.add('taken'));
     }
     // start new tetromino falling
     random = nextRandom
@@ -107,9 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // move tetromino left unless blocked or at edge
   function moveLeft() {
     undraw();
-    const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0);
+    const isAtLeftEdge = current.some((index) => (currentPosition + index) % width === 0);
     if (!isAtLeftEdge) currentPosition -= 1;
-    if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+    if (current.some((index) => squares[currentPosition + index].classList.contains('taken'))) {
       currentPosition += 1;
     }
     draw();
@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // move tetromino right unless blocked or at edge
   function moveRight() {
     undraw();
-    const isAtRightEdge = current.some(index => (currentPosition + index) % width === width - 1);
+    const isAtRightEdge = current.some((index) => (currentPosition + index) % width === width - 1);
     if (!isAtRightEdge) currentPosition += 1;
-    if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+    if (current.some((index) => squares[currentPosition + index].classList.contains('taken'))) {
       currentPosition -= 1;
     }
     draw();
@@ -155,10 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // display the next up shape in mini-grid
   function displayShape() {
     // remove tetromino
-    displaySquares.forEach(square =>{
+    displaySquares.forEach((square) =>{
       square.classList.remove('tetromino');
     });
-    upNextTetrominoes[nextRandom].forEach(index => {
+    upNextTetrominoes[nextRandom].forEach((index) => {
       displaySquares[displayIndex + index].classList.add('tetromino');
     });
   }
@@ -174,5 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     nextRandom = Math.floor(Math.random() * theTetrominoes.length);
     displayShape();
   }
+
 
 });
