@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     draw();
     displayShape();
     addScore();
+    gameOver();
   }
 
   // move tetromino left unless blocked or at edge
