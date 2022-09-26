@@ -1,6 +1,7 @@
 /* a dark banner colour for the footer,
  a high-contrast colour for fonts, and one for links*/
 html {
+  background-color: #FCC8B2;
   font-size: 16px;
   min-width: 300px;
   overflow-x: hidden;
@@ -18,7 +19,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   font-weight: 400;
   line-height: 1.5;
@@ -56,16 +56,16 @@ form {
 }
 
 .header {
+  background-color: #C6D8AF;
   padding-top: 0rem;
   padding-left: 0rem;
   padding-right: 0rem;
   padding-bottom: 1.5rem;
 }
 
-
 .header h1 {
   display: block;
-  color: #1f2a2e;
+  color: #3a2c3b;
   border-radius: 0px;
   font-size: 1.5rem;
   padding: 1.25rem;
@@ -74,6 +74,7 @@ form {
 }
 
 .box {
+  background-color: #DBD8B3;
   border: 1px solid;
   border-radius: 2px;
   width: fit-content;
@@ -83,14 +84,19 @@ form {
 }
 
 .left_section {
+  background-color: #DBD8B3;
+  border: 1.5px dashed;
   flex: 0 1 auto;
   margin: 1rem;
   padding: 1.5rem;
 }
 
 .right_section {
+  background-color: #DBD8B3;
+  border: 1.5px dashed;
   flex: 1 2 auto;
   margin: 1rem;
+  padding: 1.5rem;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -98,6 +104,7 @@ form {
 }
 
 footer {
+  background-color: #EFA48B;
   flex-shrink: 0;
   padding: 1rem;
   font-size: 1.2rem;
