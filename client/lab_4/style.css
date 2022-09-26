@@ -38,7 +38,7 @@ h2 {
 }
 
 form {
-  accent-color: hsla(120, 100%, 50%, 0.482);
+  accent-color: hsla(202, 100%, 50%, 0.482);
 }
 
 .wrapper {
@@ -70,17 +70,14 @@ form {
   /* this will push other blocks out of the way */
 
   /* colors */
-  background-color: #ffe08a;
-  color: #4a4a4a;
+  background-color: #ffb0c1;
+  color: #1f2a2e;
 
   /* shapes */
   border-radius: 6px;
   font-size: 1.5rem;
   padding: 1.25rem;
-  margin:0; /* removing the margin on h1 tags means the header pins to the top if we move */
-
-
-  /* box-shadows are fancy */
+  margin:0; 
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
 }
 
@@ -96,14 +93,14 @@ form {
 }
 
 .left_section {
-  background-color: rgba(0, 139, 139, 0.8);
+  background-color: rgba(255, 208, 219, 0.8);
   flex: 0 1 auto;
   margin: 1rem;
   padding: 1.5rem;
 }
 
 .right_section {
-  background-color: rgba(255, 224, 138, 0.7);
+  background-color: rgba(255, 208, 219, 0.8);
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
