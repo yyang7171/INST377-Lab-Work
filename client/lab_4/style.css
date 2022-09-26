@@ -58,23 +58,18 @@ form {
 }
 
 .header {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: 0rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
   padding-bottom: 1.5rem;
 }
 
 
 .header h1 {
   display: block;
-  /* this will push other blocks out of the way */
-
-  /* colors */
   background-color: #ffb0c1;
   color: #1f2a2e;
-
-  /* shapes */
-  border-radius: 6px;
+  border-radius: 0px;
   font-size: 1.5rem;
   padding: 1.25rem;
   margin:0; 
@@ -83,9 +78,8 @@ form {
 
 .box {
   background-color: rgba(239, 239, 239, 0.40);
-  border: 2px dashed;
-  border-radius: 4px;
-
+  border: 1px solid;
+  border-radius: 2px;
   width: fit-content;
   height:fit-content;
   padding: 1.5rem;
