@@ -154,7 +154,7 @@ form label {
     /* Rules in here will only apply when a screen is the correct size */
     /* check it out by using your developer tools to shrink your screen-size */
     .container {
-      background-color: rgba(255, 46, 133, 0.775);
+      background-color: #FCC8B2;
       flex-direction: column;
       justify-content: center;
       align-items: center;
