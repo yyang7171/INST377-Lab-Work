@@ -1,7 +1,84 @@
-<!-- Bring in your successful HTML/CSS from the Flexbox lab -->
-<!-- Try typing 'doc' at the top of this file and pressing "tab" -->
-<!-- if your development environment is set up correctly -->
-<!-- the Emmett plugin will set this file up for you -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yabing's Labs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <!--wrapper-->
+      <header class="header"><h1>Yabing's Labs for INST377</h1></header>
+      <div class="container">
+        <!--container-->
+        <div class="left_section box">
+          <!--left inputs-->
+          <h2>Album Names</h2>
+          <div class="box">
+            <ol>
+              <li>BTS - The Most Beautiful Moment in Life, Pt. 2</li>
+              <li>Joker Xue - 意外</li>
+              <li>MoonMoon - LIFE IS BEAUTY FULL</li>
+              <li>LeeHi - UP ALL NIGHT</li>
+              <li>Fall Out Boy - Save Rock and Roll</li>
+            </ol>
+          </div>
+        </div>
+        <div class="right_section box">
+          <!--right side-->
+          <h2>Image Carousel</h2>
+          <div class="carousel">
+            <button class="prev">prev</button>
+            <div class="slides">
+              <div class="carousel_item visible">
+                <img
+                  src="images/killua1.jpeg"
+                  alt="Cream cat with tan ears and blue eyes looking into the camera."
+                />
+              </div>
+              <div class="carousel_item hidden">
+                <img
+                  src="images/killua2.jpeg"
+                  alt="Yabing holding a cream cat with tan ears and blue eyes. The cat is not amused."
+                />
+              </div>
+              <div class="carousel_item hidden">
+                <img
+                  src="images/killua3.jpeg"
+                  alt="Cream cat with tan ears and blue eyes looking away from the camera."
+                />
+              </div>
+              <div class="carousel_item hidden">
+                <img
+                  src="images/killua4.jpeg"
+                  alt="Blurry photo of a cream cat with tan ears and blue eyes."
+                />
+              </div>
+            </div>
+            <button class="next">next</button>
+          </div>
+          <div class="subtitle box">
+            Four photos of Killua, Paris' very cute and fluffy marshmallow cat.
+            He is perfect in every imagineable way.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer-->
+    <footer class="footer">
+      yyang7171
+      <a
+        href="http://github.com/yyang7171"
+        target="_blank"
+        rel="noopener noreferrer"
+        >yyang7171 on GitHub</a
+      >
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
 
 <!-- Requirements -->
 <!-- Your page will need a form in it with an 'action' to /api and a single text field with an id/name of "resto" -->
