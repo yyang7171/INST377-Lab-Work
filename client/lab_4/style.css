@@ -1,13 +1,9 @@
-/* a dark banner colour for the footer,
- a high-contrast colour for fonts, and one for links*/
 html {
   background-color: #FCC8B2;
   font-size: 16px;
   min-width: 300px;
   overflow-x: hidden;
   overflow-y: scroll;
-
-  /* these are specific to different browsers */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -120,6 +116,7 @@ footer {
   color: rgb(255, 225, 236);
   text-decoration: none;
 }
+
 /*
 Form Styles
 */
