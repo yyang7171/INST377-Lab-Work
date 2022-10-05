@@ -158,4 +158,7 @@ html {
         align-items: center;
       }
   }
-/* In your #map rule, set map to display:none; to temporarily hide your map box */
+
+map {
+    display: none;
+}
