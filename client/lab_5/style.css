@@ -18,6 +18,7 @@ html {
     font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
     font-weight: 400;
     line-height: 1.5;
+    color:rgb(10, 34, 60);
   }
   
   a {
@@ -52,16 +53,14 @@ html {
   }
   
   .header {
-    background-color: #C6D8AF;
     padding-top: 0rem;
     padding-left: 0rem;
     padding-right: 0rem;
-    padding-bottom: 1.5rem;
   }
   
   .header h1 {
     display: block;
-    color: #3a2c3b;
+    border: 3px dashed;
     border-radius: 0px;
     font-size: 1.5rem;
     padding: 1.25rem;
@@ -70,8 +69,7 @@ html {
   }
   
   .box {
-    background-color: #DBD8B3;
-    border: 1px solid;
+    border: 1.5px dashed;
     border-radius: 2px;
     width: fit-content;
     height:fit-content;
@@ -80,7 +78,6 @@ html {
   }
   
   .left_section {
-    background-color: #DBD8B3;
     border: 1.5px dashed;
     flex: 0 1 auto;
     margin: 1rem;
@@ -88,7 +85,6 @@ html {
   }
   
   .right_section {
-    background-color: #DBD8B3;
     border: 1.5px dashed;
     flex: 1 2 auto;
     margin: 1rem;
