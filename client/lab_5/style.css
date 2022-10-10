@@ -153,6 +153,13 @@ html {
         justify-content: center;
         align-items: center;
       }
+      .box {
+        width: 100%;
+      }
+      .right_section {
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
   }
 
 map {
