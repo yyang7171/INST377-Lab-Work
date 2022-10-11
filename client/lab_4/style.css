@@ -78,14 +78,12 @@ form {
 }
 
 .left_section {
-  border: 1.5px dashed;
   flex: 0 1 auto;
   margin: 1rem;
   padding: 1.5rem;
 }
 
 .right_section {
-  border: 1.5px dashed;
   flex: 1 2 auto;
   margin: 1rem;
   padding: 1.5rem;
