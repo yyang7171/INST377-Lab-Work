@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
 
+const { load } = require("dotenv");
+
 /*
   Hook this script to index.html
   by adding `<script src="script.js">` just before your closing `</body>` tag
@@ -93,6 +95,10 @@ async function mainEvent() {
   // This IF statement ensures we can't do anything if we don't have information yet
   if (arrayFromJson.data?.length > 0) { // the question mark in this means "if this is set at all"
     submit.style.display = 'block'; // let's turn the submit button back on by setting it to display as a block when we have data available
+
+    // hide load button
+    loadAnimation.classList.remove('lds-ellipsis');
+    loadAnimation.classList.add('lds-ellipsis_hidden'); // displays as button when there is data
 
     // And here's an eventListener! It's listening for a "submit" button specifically being clicked
     // this is a synchronous event event, because we already did our async request above, and waited for it to resolve
