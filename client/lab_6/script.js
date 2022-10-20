@@ -80,7 +80,7 @@ async function mainEvent() {
   // the async keyword means we can make API requests
   const form = document.querySelector('.main_form'); // get your main form so you can do JS with it
   const submit = document.querySelector('#get-resto'); // get a reference to your submit button
-  const loadAnimation = document.querySelector('.lds-ellipsis;'); // get a reference to loading animation
+  const loadAnimation = document.querySelector('.lds-ellipsis'); // get a reference to loading animation
   submit.style.display = 'none'; // let your submit button disappear
 
   /*
@@ -88,7 +88,7 @@ async function mainEvent() {
     This next line goes to the request for 'GET' in the file at /server/routes/foodServiceRoutes.js
     It's at about line 27 - go have a look and see what we're retrieving and sending back.
    */
-  const results = await fetch('/api/foodServicesPG');
+  const results = await fetch('/api/foodServicePG');
   const arrayFromJson = await results.json(); // here is where we get the data from our request as JSON
 
   /*
