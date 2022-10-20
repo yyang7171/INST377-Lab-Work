@@ -154,7 +154,7 @@ html {
         align-items: center;
       }
       .box {
-        width: 100%;
+        width: flex;
       }
       .right_section {
         align-items: flex-start;
