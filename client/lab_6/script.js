@@ -13,6 +13,7 @@
 
 function injectHTML(list) {
   console.log('fired injectHTML');
+
   /*
   ## JS and HTML Injection
     There are a bunch of methods to inject text or HTML into a document using JS
@@ -62,7 +63,7 @@ async function mainEvent() {
 
   // the async keyword means we can make API requests
   const form = document.querySelector('.main_form'); // get your main form so you can do JS with it
-  const submit = document.querySelector('button[type="submit"]'); // get a reference to your submit button
+  const submit = document.querySelector('#get-resto'); // get a reference to your submit button
   submit.style.display = 'none'; // let your submit button disappear
 
   /*
