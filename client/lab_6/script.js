@@ -23,7 +23,7 @@ function injectHTML(list) {
 
   list.forEach((item) => {
     const str = `<li>${item.name} </li>`;
-    target.innerHTML += str;
+    listEl.innerHTML += str;
   });
   /*
   ## JS and HTML Injection
