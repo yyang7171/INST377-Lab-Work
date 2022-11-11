@@ -3,6 +3,8 @@
     height: 600px;
     background-color: bisque;
     position: relative;
+    font-size: 200px;
+    text-align: center;
 }
 
 .doodler {
@@ -15,6 +17,6 @@
 .platform {
     width: 85px;
     height: 15px;
-    background-color: darksalmon;
+    background-color: darkolivegreen;
     position: absolute;
 }
