@@ -168,7 +168,7 @@ html {
     display: block;
     width: 400px;
     height: 300px;
-    border: 2px dashed rbg(99,99,99);
+    border: 2px dashed;
     margin-bottom: 1rem;
   }
 
