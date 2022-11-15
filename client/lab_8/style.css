@@ -94,10 +94,6 @@ html {
     display: flex;
     flex-direction: column;
   }
-  
-  #map {
-    height: 360px;
-  }
 
   footer {
     background-color: #EFA48B;
@@ -166,9 +162,16 @@ html {
       }
   }
   
-  map {
-    display: none;
+  /* MAP STYLES*/
+
+  #map {
+    display: block;
+    width: 400px;
+    height: 300px;
+    border: 2px dashed rbg(99,99,99);
+    margin-bottom: 1rem;
   }
+
   /* 
       New code bonus: pure CSS data loading icon
       This comes from loading.io/css - it's nice to show that something is happening!
