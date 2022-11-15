@@ -69,7 +69,7 @@ html {
   }
   
   .box {
-    border: 1.5px dashed;
+    border: 2px dashed;
     border-radius: 2px;
     width: fit-content;
     height:fit-content;
@@ -78,14 +78,14 @@ html {
   }
   
   .left_section {
-    border: 1.5px dashed;
+    border: 2px dashed;
     flex: 0 1 auto;
     margin: 1rem;
     padding: 1.5rem;
   }
   
   .right_section {
-    border: 1.5px dashed;
+    border: 2px dashed;
     flex: 1 2 auto;
     margin: 1rem;
     padding: 1.5rem;
